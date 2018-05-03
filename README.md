@@ -1,6 +1,5 @@
-# essay-amino-translator
-this is what happens when you let honors students have too much time
+# My random scripts
+I write a lot of random one-off scripts to do various tasks that don't really fit into another repo. This is their home.
 
-run this and it'll translate most of your ascii input text into the codes for the standard amino acids
-
-there might be bugs but honestly this was a 15-minute write so oh well
+# Scripts
+* essay_amino_translate.py: translates ASCII text into a series of amino acid tags

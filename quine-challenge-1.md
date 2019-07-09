@@ -4,6 +4,8 @@ These are the requirements for CASS Code Challenge #1! The competition will run 
 ## The challenge
 Your task is to create a [quine](https://en.wikipedia.org/wiki/Quine_(computing)) that outputs 750,000 files that contain copies of its source code. A quine can't take any inputs through the console, an external file, or over the network -- all information to run the program must be contained within the source file.
 
+You aren't allowed to use a "cheating" quine, as outlined in the wikipedia page.
+
 ## Judging
 Your program will be judged on three criteria:
 

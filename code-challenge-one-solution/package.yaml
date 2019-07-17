@@ -1,0 +1,26 @@
+name:                code-challenge-one
+version:             1.0.0.0
+github:              "devsebb/code-challenge-one"
+license:             BSD3
+author:              "Sebastian Benjamin"
+maintainer:          "sebastiancbenjamin@gmail.com"
+copyright:           "GNU GPL v3"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/devsebb/code-challenge-one#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+executables:
+  code-challenge-one:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - async
+    - bytestring

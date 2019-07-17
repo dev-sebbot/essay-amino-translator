@@ -3,4 +3,5 @@ I write a lot of random one-off scripts to do various tasks that don't really fi
 
 # Scripts
 * essay_amino_translate.py: translates ASCII text into a series of amino acid tags
-* entropy_measurement_merge_sort: actually not a merge sort but it's some dumb programming challenge basically
+* code-challenge-descriptions: descriptions of various code challenges I've ran
+* code-challenge-X-solution: my solution to the given code challenge in code-challenge-descriptions

@@ -15,12 +15,25 @@ dependencies:
 - base >= 4.7 && < 5
 
 executables:
-  code-challenge-one:
+  testexec:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
     - -rtsopts
     - -with-rtsopts=-N
+    dependencies:
+    - async
+    - bytestring
+
+  prod:
+    main:                Prod.hs
+    source-dirs:         app
+    ghc-options:
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -threaded
+    - -O2
+    - -main-is Prod
     dependencies:
     - async
     - bytestring

@@ -9,7 +9,7 @@ def main():
 
         with open(sys.argv[1], 'r+') as file:
                 for line in file:
-                        result = re.match('^\\s*<(Content|EmbeddedResource|Compile)\\s*Include="([^"]*)', line)
+                        result = re.match('^\\s*<(Content|EmbeddedResource|Compile)\\s*Include="([^"]*)', line) #thanks, souchist
                         if result is None:
                                 continue
                         

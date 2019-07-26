@@ -19,7 +19,7 @@ Get your Judging Score as high as possible:
     size (number of characters per file)
     coolness (ranking relative to rest of office)
     
-    judging_score = (1000 * coolness) - ((10 * size) + (1 * time))
+    judging_score = (coolness * 7000) - ((size * 300) + time)
 ```
 
 ## Requirements

@@ -5,8 +5,8 @@ packages:
 
 extra-deps: 
 - async-2.2.2
-- bytestring-0.10.8.2
 - conduit-1.2.13.1
 - conduit-extra-1.1.17
 - resourcet-1.1.11
 - streaming-commons-0.1.19
+- text-1.2.3.1

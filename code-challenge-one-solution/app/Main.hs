@@ -1,16 +1,13 @@
-{-# LANGUAGE OverloadedStrings #-}
-
 module Main where
 
-import System.Environment
 import Control.Concurrent.Async
-import Data.Char
-import qualified Data.ByteString as BS
+import qualified Data.Text as T
+import qualified Data.Text.IO as I
 
 numFiles        = 750000
-threadNum       = 1000
+threadNum       = 50
 filesPerThread  = numFiles `div` threadNum
-testText        = "mdiT1UO9B65T2wjVrutGqlAeHMPuvpcZxnTKz2TjjuvufHqT79e2RqKkrM71frXVZ4NVzgP8Dhg0pC9v0mbiyZY6TPhjbZ1i7EvoYoPniUXZPKRXS0kCmPOyuvP8gdpYHxpcOCaYR2RcwxtpfYSyhqwO0VBVAJIZ2LooxLI58us8lrsxvxCKQWGHqyP8iCGbE8UEH2ZrptO633zWRqYjoF5llgBouInFID6ca62uoLvcI9vAlyIK5uAyvjPgjm3mMYbzZfYILhgFXlBGSq5QuPA5VuD2v7UFkjIlv3OWvn3NVP4A4DC9uBz9i4JsnVfv0mK9oP9Lxd7VxAh4GXtmTBTYTG7MBAMno3QQvb9YjwQf4AzalXbrJjUGpQMReDKDrDxyQXIXvZ4AIN12ZV6foXYb6I1hkPBLKO8jH14hGtpvU3hdNqrsJcSKMkxPQXdp6awJ619laRTM8wrxp9T4rpzkPxN7H8SCwV0ZeD0ANleWF4GUkZuZ" :: BS.ByteString
+testText        = T.pack "mdiT1UO9B65T2wjVrutGqlAeHMPuvpcZxnTKz2TjjuvufHqT79e2RqKkrM71frXVZ4NVzgP8Dhg0pC9v0mbiyZY6TPhjbZ1i7EvoYoPniUXZPKRXS0kCmPOyuvP8gdpYHxpcOCaYR2RcwxtpfYSyhqwO0VBVAJIZ2LooxLI58us8lrsxvxCKQWGHqyP8iCGbE8UEH2ZrptO633zWRqYjoF5llgBouInFID6ca62uoLvcI9vAlyIK5uAyvjPgjm3mMYbzZfYILhgFXlBGSq5QuPA5VuD2v7UFkjIlv3OWvn3NVP4A4DC9uBz9i4JsnVfv0mK9oP9Lxd7VxAh4GXtmTBTYTG7MBAMno3QQvb9YjwQf4AzalXbrJjUGpQMReDKDrDxyQXIXvZ4AIN12ZV6foXYb6I1hkPBLKO8jH14hGtpvU3hdNqrsJcSKMkxPQXdp6awJ619laRTM8wrxp9T4rpzkPxN7H8SCwV0ZeD0ANleWF4GUkZuZ"
 
 main :: IO ()
 main = do awaitThreadList $ spawnThreads 0
@@ -32,7 +29,7 @@ spawnThreads id
 
 task :: [Int] -> IO ()
 task [] = do return ()
-task l  = do BS.writeFile (show (head l) ++ ".txt") testText
+task l  = do I.writeFile (show (head l) ++ ".txt") testText
              task $ tail l
 
 testTask :: Int -> IO ()

@@ -13,6 +13,8 @@ description:         Please see the README on GitHub at <https://github.com/devs
 
 dependencies:
 - base >= 4.7 && < 5
+- async
+- text
 
 executables:
   testexec:
@@ -21,9 +23,6 @@ executables:
     ghc-options:
     - -rtsopts
     - -with-rtsopts=-N
-    dependencies:
-    - async
-    - bytestring
 
   prod:
     main:                Prod.hs
@@ -34,6 +33,3 @@ executables:
     - -threaded
     - -O2
     - -main-is Prod
-    dependencies:
-    - async
-    - bytestring

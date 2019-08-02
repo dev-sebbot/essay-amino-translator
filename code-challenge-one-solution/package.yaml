@@ -19,7 +19,7 @@ dependencies:
 - parallel
 
 executables:
-  testexec:
+  exec:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -27,13 +27,3 @@ executables:
     - -with-rtsopts=-N
     - -threaded
     - -O2
-
-  prod:
-    main:                Prod.hs
-    source-dirs:         app
-    ghc-options:
-    - -rtsopts
-    - -with-rtsopts=-N
-    - -threaded
-    - -O2
-    - -main-is Prod

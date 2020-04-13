@@ -14,7 +14,7 @@ def complement(char):
 
 if __name__ == "__main__":
   if len(sys.argv) != 2:
-    print("Usage:\n    python 3.py <filename>")
+    print("Usage:\n    python REVC.py <filename>")
     exit()
 
   with open(sys.argv[1]) as f:
